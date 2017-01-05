@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+Route::get('now', function(){
+    return date("Y-m-d H:i:s");
+});
+
+// vue
+Route::get('/vue', function () {
+    return view('vue');
+});
