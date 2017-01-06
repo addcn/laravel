@@ -1,6 +1,6 @@
 ## Laravel
 
-```php artisan --version```
+> php artisan --version
 
 ```5.3.26```
 
