@@ -1,13 +1,22 @@
 <template>
-    <div class="container">
-        Home
-    </div>
+    <div>{{ statistics }}</div>
 </template>
 
 <script>
+
     export default {
+        data () {
+            return {
+                statistics: ""
+            }
+        },
         mounted() {
-            console.log('Component mounted.')
+            this.$http.get('/now')
+                .then((response) => {
+                    this.statistics = response.data
+
+                    console.log(response.data)
+                })
         }
     }
 </script>

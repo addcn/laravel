@@ -37,6 +37,13 @@
 
         </div>
         
+        <hr/>
+        <h4>Laravel5.3 + vue2 学习系列</h4>
+        <ul>
+                <li>Laravel5.3 + vue2 学习 Day1 <a href="http://l.com">环境配置及基本概念</a></li>
+                <li>Laravel5.3 + vue2 学习 Day2 <a href="http://l.com/vue">Hello Vue</a></li>
+                <li>Laravel5.3 + vue2 学习 Day3 <a href="http://l.com/dashboard">vue单页面项目开发</a></li>
+        </ul>
 
         <script type="text/javascript">
             var Laravel = {

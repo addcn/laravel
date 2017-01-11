@@ -1,5 +1,6 @@
 <template>
-    <div class="container">        
+    <div class="container">
+
     	<h2>Dashboard {{ $route.params.id }}</h2>
 
     	<p>
@@ -8,12 +9,12 @@
 
     		<router-link to="/dashboard/links">/dashboard/links</router-link>
     		<router-link to="/dashboard/links/create">/dashboard/links/create</router-link>
-    		<router-link to="/dashboard/links/1/edit">/dashboard/links/1/edit</router-link>
-
-    		
+    		<router-link to="/dashboard/links/1/edit">/dashboard/links/1/edit</router-link>    		
     	</p>
 
+        <!-- 嵌套路由 -->
         <router-view></router-view>
+        
     </div>
 
 </template>
