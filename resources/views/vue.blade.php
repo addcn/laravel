@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ elixir('css/dashboard.css') }}">
         <title>hello vue2 & vue-router 2</title>
     </head>
 
     <body>
 
-        <div id="app" class="container">
+        <div id="app">
 
             <h2>Hello Vue</h2>
 
@@ -26,21 +26,21 @@
 
         <hr/>
         <div>
-            <h2>Hello Vue</h2>
+            <h3>Hello Vue</h3>
 
-            <h3>詳步驟</h3>
+            <h4>详步骤</h4>
             <ul>
                 <li>配置package.json</li>
                 <li>安装依赖 npm install</li>
 
                 <li>配置路由web.php及模板vue.blade.php</li>
-                <li>引入vue及vue-router開發，見js/app.js</li>
+                <li>引入vue及vue-router开发，见js/app.js</li>
 
                 <li>编译合并 JS/CSS 代码，gulp，如需实时编译，可输入 gulp watch</li>
                 <li>http://l.com/vue</li>
             </ul>
 
-            <h3>技術棧</h3>
+            <h4>技术栈</h4>
             <ul>
                 <li><a href="https://cn.vuejs.org/v2/guide/" target="_blank">vue2</a><br/> Vue.js是一套构建用户界面的 渐进式框架。</li>            
                 <li><a href="https://vuex.vuejs.org/zh-cn/intro.html" target="_blank">vuex</a><br/> Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。</li>

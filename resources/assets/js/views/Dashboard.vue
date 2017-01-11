@@ -1,6 +1,5 @@
 <template>
-    <div class="container">  
-
+    <div>
     	<div><router-link to="/vue">/vue</router-link></div>
 
     	<h2>Dashboard {{ $route.params.id }}</h2>
@@ -29,3 +28,9 @@
         }
     }
 </script>
+
+<style scoped>
+    h2 {
+
+    }
+</style>

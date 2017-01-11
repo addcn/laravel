@@ -7,13 +7,13 @@
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        <link rel="stylesheet" href="{{ elixir('css/dashboard.css') }}">
         <title>dashboard</title>
     </head>
 
     <body>      
 
-        <div id="app" class="container">
+        <div id="app">
             <router-view class="view"></router-view>
         </div>
 
@@ -21,7 +21,7 @@
         <div>
             <p>Laravel5.3 + vue2 学习 Day3</p>
             <h3>vue单页面项目开发</h3>
-            <p>参考成熟线上开源项目结构，从零开始vue单页面项目。</p>
+            <p>构建可运行在生产环境，从零开始开发vue单页面项目。</p>
             <p>假设开发一个dashboard模块，模块有3个功能：默认首页、系统配置页、链接管理页（其中链接管理包含列表显示页、增加页面、修改页面）。项目进来显示默认首页http://l.com/dashboard，点击各链接分别导航至对应功能页面。</p>
 
             <h4>步骤：</h4>
@@ -33,6 +33,8 @@
 
                 <li>前端js入口及路由文件。resources\assets\js\dashboard.js、resources\assets\js\routes.js</li>
                 <li>功能页面文件resources\assets\js\views</li>
+                <li>编译合并 JS/CSS 代码，gulp，如需实时编译，可输入 gulp watch</li>
+                <li>http://l.com/dashboard</li>
             </ul>
 
         </div>

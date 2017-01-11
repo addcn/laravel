@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         System
     </div>
 </template>
@@ -11,3 +11,9 @@
         }
     }
 </script>
+
+<style scoped>
+    h2 {
+
+    }
+</style>
