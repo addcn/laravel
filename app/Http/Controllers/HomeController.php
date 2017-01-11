@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
+    /**
+     * Display the dashboard page.
+     * 
+     * @return mixed
+     */
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }

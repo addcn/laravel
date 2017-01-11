@@ -13,7 +13,7 @@
         <h2>Hello Vue</h2>
 
         <div id="app" class="container">
-            <a href="http://l.com/">Home</a>
+            <a href="/vue">Home</a>
 
             <!-- 使用 router-link 组件来导航. -->
             <router-link to="/foo">Go to Foo</router-link>

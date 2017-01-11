@@ -29,3 +29,8 @@ Route::get('now', function(){
 Route::get('/vue', function () {
     return view('vue');
 });
+
+Route::group(['prefix' => 'dashboard'], function () {
+   Route::get('{path?}', 'HomeController@dashboard')->where('path', '[\/\w\.-]*');
+});
+
