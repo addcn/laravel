@@ -34,3 +34,6 @@ Route::group(['prefix' => 'dashboard'], function () {
    Route::get('{path?}', 'HomeController@dashboard')->where('path', '[\/\w\.-]*');
 });
 
+
+// article
+Route::get('/article', 'ArticleController@detail');
