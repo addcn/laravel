@@ -36,4 +36,14 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 
 // article
-Route::get('/article', 'ArticleController@detail');
+//Route::get('/article', 'ArticleController@detail');
+
+
+Route::get('/article/index', 'ArticleController@index');
+Route::get('/article/list', 'ArticleController@alist');
+Route::get('/article/detail', 'ArticleController@detail');
+
+Route::get('/article/create', 'ArticleController@create');
+Route::get('/article/edit', 'ArticleController@edit');
+Route::get('/article/delete', 'ArticleController@delete');
+
