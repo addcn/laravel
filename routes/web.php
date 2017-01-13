@@ -36,7 +36,7 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 
 // article
-//Route::get('/article', 'ArticleController@detail');
+Route::get('/article', 'ArticleController@test');
 
 
 Route::get('/article/index', 'ArticleController@index');
@@ -47,3 +47,11 @@ Route::get('/article/create', 'ArticleController@create');
 Route::get('/article/edit', 'ArticleController@edit');
 Route::get('/article/delete', 'ArticleController@delete');
 
+
+Route::get('/article/contact', function () {
+    return view('contact');
+});
+
+Route::get('/article/about', function () {
+    return view('about');
+});
