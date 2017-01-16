@@ -50,33 +50,33 @@
 
     <body>
 
-<!-- Header -->
-    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand">Astrospace</a>
+        <!-- Header -->
+        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="{{ url('article/index') }}" class="navbar-brand">Article</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                    <form class="navbar-form navbar-right" role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('article/create') }}">Create</a></li>
+                        <li><a href="{{ url('article/contact') }}">Contact</a></li>
+                        <li class="active"><a href="{{ url('article/about') }}">About</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <form class="navbar-form navbar-right" role="search">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>             
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="active"><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
     <!-- Body -->
     <div class="container">
@@ -154,46 +154,21 @@
         </div>
     </div>
 
-    <!-- /footer -->
-        <footer class="footer ">
+    <footer>
           <div class="container">
             <hr/>
             <p>Copyrights &copy; 2017 dodo. All Rights Reserved.</p>
           </div>
-        </footer> 
+        </footer> <!-- /footer -->
 
 
-
-        <div id="app">
-            <h4>Article</h4>
-            <p><a href="http://l.com/article/index">Index</a>&nbsp;
-                <a href="http://l.com/article/list">List</a>&nbsp;
-                <a href="http://l.com/article/detail">Detail</a>&nbsp;
-                <a href="http://l.com/article/create">Create</a>&nbsp;
-                <a href="http://l.com/article/edit">Edit</a>&nbsp;
-                <a href="http://l.com/article/delete">Delete</a>
-            </p>
-            <hr/>
-            
-
-            <div class="content"> 
-                create
-            </div>
-
-            <hr/>
-            <h4>Laravel5.3 + Vue2 + Bootstrap3 学习系列</h4>
-            <ul>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day1 <a href="http://l.com">环境配置及基本概念</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day2 <a href="http://l.com/vue">Hello Vue</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="http://l.com/dashboard">Vue单页面项目开发</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="http://l.com/article/index">文章发布系统</a></li>
-            </ul>
+        <div id="app"></div>
 
         <!-- Scripts -->
         <script src="{{ elixir('js/home.js') }}"></script>
 
         <script>
-            hljs.initHighlightingOnLoad();
+            //hljs.initHighlightingOnLoad();
         </script>
 
     </body>

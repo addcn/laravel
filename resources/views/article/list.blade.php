@@ -53,7 +53,7 @@
 
 
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
 
             <div class="navbar-header">
@@ -89,14 +89,14 @@
                 <li><a href="../navbar-static-top/">Static top</a></li>
                 <li class="active"><a href="./">Fixed top</a></li>
               </ul>
-            </div><!--/.nav-collapse -->
+            </div>/.nav-collapse 
 
           </div>
-        </nav>
+        </nav>-->
 
 
         <!-- Header -->
-        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">           
+        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -105,7 +105,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="index.html" class="navbar-brand">Astrospace</a>
+                    <a href="{{ url('article/index') }}" class="navbar-brand">Article</a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-right" role="search">
@@ -115,13 +115,27 @@
                       <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="{{ url('article/create') }}">Create</a></li>
+                        <li><a href="{{ url('article/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('article/about') }}">About</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
+
+        <div class="container">
+          <ul>
+          @foreach ($articles as $article)
+              <li><a href="{{ url('article/detail/') }}/{{ $article->id }}">{{ $article->title }}</a></li>              
+          @endforeach
+          </ul>
+
+          <div>{{ $articles->links() }}</div>
+        </div>
+        
+
+        
 
 
 

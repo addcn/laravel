@@ -60,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="index.html" class="navbar-brand">Astrospace</a>
+                    <a href="{{ url('article/index') }}" class="navbar-brand">Article</a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-right" role="search">
@@ -70,9 +70,9 @@
                       <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="{{ url('article/create') }}">Create</a></li>
+                        <li><a href="{{ url('article/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('article/about') }}">About</a></li>
                     </ul>
                 </nav>
             </div>

@@ -36,22 +36,27 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 
 // article
-Route::get('/article', 'ArticleController@test');
+Route::get('article', 'ArticleController@test');
 
 
-Route::get('/article/index', 'ArticleController@index');
-Route::get('/article/list', 'ArticleController@alist');
-Route::get('/article/detail', 'ArticleController@detail');
+Route::get('article/index', 'ArticleController@index');
+Route::get('article/list', 'ArticleController@alist');
+Route::get('article/detail/{id}', 'ArticleController@detail');
 
-Route::get('/article/create', 'ArticleController@create');
-Route::get('/article/edit', 'ArticleController@edit');
-Route::get('/article/delete', 'ArticleController@delete');
+Route::get('article/create', 'ArticleController@create');
+Route::post('article/create', 'ArticleController@store');
+//Route::post('article/create', 'ArticleController@store')->middleware('auth');
 
 
-Route::get('/article/contact', function () {
+
+Route::get('article/edit', 'ArticleController@edit');
+Route::get('article/delete', 'ArticleController@delete');
+
+
+Route::get('article/contact', function () {
     return view('contact');
 });
 
-Route::get('/article/about', function () {
+Route::get('article/about', function () {
     return view('about');
 });

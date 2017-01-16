@@ -61,7 +61,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="index.html" class="navbar-brand">Astrospace</a>
+                    <a href="{{ url('article/index') }}" class="navbar-brand">Article</a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-right" role="search">
@@ -71,9 +71,9 @@
                       <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="{{ url('article/create') }}">Create</a></li>
+                        <li><a href="{{ url('article/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('article/about') }}">About</a></li>
                     </ul>
                 </nav>
             </div>
@@ -84,8 +84,8 @@
         <div class="container">
             <div class="dicussion row">
                 <div class="col-md-9 col-md-offset-1">
-                    <form class="form-horizontal" action="http://b.com/discussion" method="POST">
-                        <input type="hidden" name="_token" value="od9xKv6fesONJnqe2Puux8GWlQs58OFsD6SwumKi">
+                    <form class="form-horizontal" action="{{ url('article/create') }}" method="post">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
                             <label for="title" class="col-sm-2 control-label">Title</label>
@@ -122,33 +122,15 @@
         </div>
 
 
-
-
-        <div id="app">
-            <h4>Article</h4>
-            <p><a href="http://l.com/article/index">Index</a>&nbsp;
-                <a href="http://l.com/article/list">List</a>&nbsp;
-                <a href="http://l.com/article/detail">Detail</a>&nbsp;
-                <a href="http://l.com/article/create">Create</a>&nbsp;
-                <a href="http://l.com/article/edit">Edit</a>&nbsp;
-                <a href="http://l.com/article/delete">Delete</a>
-            </p>
+        <footer>
+          <div class="container">
             <hr/>
-            
+            <p>Copyrights &copy; 2017 dodo. All Rights Reserved.</p>
+          </div>
+        </footer> <!-- /footer -->
 
-            <div class="content"> 
-                create
-            </div>
 
-            <hr/>
-            <h4>Laravel5.3 + Vue2 + Bootstrap3 学习系列</h4>
-            <ul>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day1 <a href="http://l.com">环境配置及基本概念</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day2 <a href="http://l.com/vue">Hello Vue</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="http://l.com/dashboard">Vue单页面项目开发</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="http://l.com/article/index">文章发布系统</a></li>
-            </ul>
-        </div>
+        <div id="app"></div>
 
         <!-- Scripts -->
         <script src="{{ elixir('js/home.js') }}"></script>

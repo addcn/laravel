@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Repositories\ArticleRepository;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -75,11 +76,13 @@ class ArticleController extends Controller
         //$article->content = collect(json_decode($article->content))->get('html');
         
         $article = new \App\Article();
+        $articles = DB::table('articles')->simplePaginate(3);
 
+        $articles = $this->article->page(3);
 
 
         //var_dump($article);exit;
-        return view('article.list', compact('article'));
+        return view('article.list', compact('articles'));
     }
 
 
@@ -89,9 +92,15 @@ class ArticleController extends Controller
      * @param  string
      * @return mixed
      */
-    public function detail()
+    public function detail($id)
     {
         $article = new \App\Article();
+
+        $article = $this->article->getById($id);
+
+        var_dump($article);
+
+
 
         $content = file_get_contents("./files/markdown/article/README.md");
 
@@ -131,6 +140,48 @@ class ArticleController extends Controller
 
         //var_dump($article);exit;
         return view('article.create', compact('article'));
+    }
+
+    /**
+     * Display the article
+     * 
+     * @param  string
+     * @return mixed
+     */
+    public function store(Request $request)
+    {
+        //$article = $this->article->getById(1);
+        //$article->content = collect(json_decode($article->content))->get('html');
+        
+        $article = new \App\Article();
+
+        //var_dump($request->all());exit;
+
+
+        $data = array_merge($request->all(), [
+            'user_id'      => \Auth::id(),
+            'last_user_id' => \Auth::id(),
+            'status'       => true
+        ]);
+
+        $data = array_merge($request->all(), [
+            'user_id'      => "1001",
+            'last_user_id' => "1002",
+            'category_id'  => "1",
+            'subtitle'     => "subtitle"
+        ]);
+
+        $result = $this->article->store($data);
+
+        //print_r($result->id);exit;
+
+        return redirect()->to('article/detail/'.$result->id);
+
+
+
+
+        //var_dump($article);exit;
+        //return view('article.create', compact('article'));
     }
 
 
