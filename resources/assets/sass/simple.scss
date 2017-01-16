@@ -1,0 +1,54 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+
+/** global **/
+body {
+    margin-top: 75px;
+}
+
+footer {
+    margin: 10px 0;
+}
+
+/** header **/
+header.simple-navbar {
+    color: #333333;
+    background-color: #dddddd;
+    border-width: 5px 0 0;
+    border-color: #e74430;
+}
+
+header.simple-navbar .navbar-brand{
+    color: #e74430;
+}
+
+header.simple-navbar .navbar-nav > li > a{
+    color: #333333;
+}
+
+/**
+header.simple-navbar .navbar-nav > li > a:link { 
+    color:#333333; 
+    text-decoration:none; 
+}
+header.simple-navbar .navbar-nav > li > a:visited { 
+    color:#333333; 
+    text-decoration:none; 
+}
+header.simple-navbar .navbar-nav > li > a:hover { 
+    color:#333333; 
+    text-decoration:underline; 
+}
+header.simple-navbar .navbar-nav > li > a:active { 
+    color:#333333; 
+}
+**/
+

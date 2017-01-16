@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/favicon.ico" >
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ elixir('css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ elixir('css/simple.css') }}">
         <!-- Scripts -->
         <script>
             window.Laravel = <?php echo json_encode([
@@ -16,87 +17,13 @@
         </script>
         
         <title>{{ config('app.name', 'Laravel') }}</title>
-
-
-        <style>
-
-            body {
-                margin-top: 75px;
-            }
-
-
-            footer {
-                margin: 10px 0;
-            }
-
-            #comments, #comments li {
-                margin: 0;
-                padding: 0;
-            }
-
-            #comments li {
-                list-style: none;
-            }
-                    
-            .photo {
-                margin-bottom: 10px;
-            }
-
-            .social-buttons button {
-                margin-top: 5px;
-            }
-        </style>
-
     </head>
 
     <body>
 
 
-        <!-- Fixed navbar -->
-        <!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-          <div class="container">
-
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Default</a></li>
-                <li><a href="../navbar-static-top/">Static top</a></li>
-                <li class="active"><a href="./">Fixed top</a></li>
-              </ul>
-            </div>/.nav-collapse 
-
-          </div>
-        </nav>-->
-
-
         <!-- Header -->
-        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav simple-navbar" role="banner">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -105,39 +32,30 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="{{ url('article/index') }}" class="navbar-brand">Article</a>
+                    <a href="{{ url('article/index') }}" class="navbar-brand"><span class="glyphicon glyphicon-tree-conifer"></span>进击的程序员</a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <form class="navbar-form navbar-right" role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                      </div>
-                      <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
+                    
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ url('article/create') }}">Create</a></li>
+                        <li><a href="{{ url('article/create') }}">Create</a></li>
                         <li><a href="{{ url('article/contact') }}">Contact</a></li>
                         <li><a href="{{ url('article/about') }}">About</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                          </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </header>
-
-
-        <div class="container">
-          <ul>
-          @foreach ($articles as $article)
-              <li><a href="{{ url('article/detail/') }}/{{ $article->id }}">{{ $article->title }}</a></li>              
-          @endforeach
-          </ul>
-
-          <div>{{ $articles->links() }}</div>
-        </div>
-        
-
-        
-
-
 
         <!-- Body -->
         <div class="container">
@@ -394,48 +312,28 @@
         </div>
 
 
-        <div class="container" id="app"></div>
+        
 
-        <!-- /footer -->
-        <footer class="footer ">
+        <div class="container">
+          <div id="app"></div>
+          <ul>
+            @foreach ($articles as $article)
+                <li><a href="{{ url('article/detail/') }}/{{ $article->id }}">{{ $article->title }}</a></li>              
+            @endforeach
+          </ul>
+
+          <div>{{ $articles->links() }}</div>
+        </div> <!-- /list -->
+
+        <footer>
           <div class="container">
             <hr/>
-            <p>Copyrights &copy; 2017 dodo. All Rights Reserved.</p>
+            <p class="text-center">Copyrights &copy; 2017 dodo. All Rights Reserved.</p>
           </div>
-        </footer> 
-
-
-
-        <!--
-
-        <div id="app">
-            <h4>Article</h4>
-            <p><a href="http://l.com/article/index">Index</a>&nbsp;
-                <a href="http://l.com/article/list">List</a>&nbsp;
-                <a href="http://l.com/article/detail">Detail</a>&nbsp;
-                <a href="http://l.com/article/create">Create</a>&nbsp;
-                <a href="http://l.com/article/edit">Edit</a>&nbsp;
-                <a href="http://l.com/article/delete">Delete</a>
-            </p>
-            <hr/>
-            
-
-            <div class="content"> 
-                list
-            </div>
-
-            <hr/>
-            <h4>Laravel5.3 + Vue2 + Bootstrap3 学习系列</h4>
-            <ul>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day1 <a href="http://l.com">环境配置及基本概念</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day2 <a href="http://l.com/vue">Hello Vue</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="http://l.com/dashboard">Vue单页面项目开发</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="http://l.com/article/index">文章发布系统</a></li>
-            </ul>
-        </div>-->
+        </footer> <!-- /footer -->
 
         <!-- Scripts -->
-        <script src="{{ elixir('js/home.js') }}"></script>
+        <script src="{{ elixir('js/simple.js') }}"></script>
 
         <script>
             hljs.initHighlightingOnLoad();

@@ -21,4 +21,7 @@ elixir((mix) => {
 	mix.sass('dashboard.scss').webpack('home.js');
 
 
+	mix.sass('simple.scss').webpack('simple.js');
+
+
 });
