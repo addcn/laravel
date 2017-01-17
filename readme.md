@@ -7,7 +7,6 @@
 
 
 ```
-
 # clone项目
 git clone https://github.com/addcn/laravel.git your-project-folder
 
@@ -28,9 +27,7 @@ chmod -R 775 /path/your-project-folder/storage /path/your-project-folder/bootstr
 cd /path/your-project-folder
 php artisan migrate
 
-
 ```
-
 http://www.your-domain.com/
 
 
