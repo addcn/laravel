@@ -1,6 +1,6 @@
 # Laravel
 
-使用 Laravel ```5.3.26``` +  vue ```2``` + Bootstrap ```3``` 构建。
+使用 Laravel ```5.3.26``` +  vue ```2``` + Bootstrap ```3``` 构建（已钩子提交自动更新）。
 
 ## How to?
 
@@ -26,7 +26,7 @@ cd /path/your-project-folder
 php artisan migrate
 
 ```
-查看演示1 http://www.uedao.com/article/index
+查看演示 http://www.uedao.com/article/index
 
 
 ## About me
