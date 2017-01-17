@@ -308,7 +308,18 @@
 
                 </div>
             </div>
-        </div>        
+        </div>   
+
+        <div class="container">
+          <ul>
+            @foreach ($articles as $article)
+                <li><a href="{{ url('article/detail/') }}/{{ $article->id }}">{{ $article->title }}</a></li>              
+            @endforeach
+          </ul>
+
+          <div>{{ $articles->links() }}</div>
+        </div> <!-- /list -->
+
 
         <div class="container">
             <h4>Article</h4>
