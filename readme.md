@@ -26,7 +26,7 @@ cd /path/your-project-folder
 php artisan migrate
 
 ```
-查看演示 http://www.uedao.com/article/index
+查看演示1 http://www.uedao.com/article/index
 
 
 ## About me
