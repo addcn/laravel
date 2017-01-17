@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/favicon.ico" >
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ elixir('css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ elixir('css/simple.css') }}">
         <!-- Scripts -->
         <script>
             window.Laravel = <?php echo json_encode([
@@ -16,41 +17,13 @@
         </script>
         
         <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <style>
-
-            body {
-                margin-top: 75px;
-            }
-
-
-            footer {
-                margin: 10px 0;
-            }
-
-            #comments, #comments li {
-                margin: 0;
-                padding: 0;
-            }
-
-            #comments li {
-                list-style: none;
-            }
-                    
-            .photo {
-                margin-bottom: 10px;
-            }
-
-            .social-buttons button {
-                margin-top: 5px;
-            }
-        </style>
     </head>
 
     <body>
 
+
         <!-- Header -->
-        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav simple-navbar" role="banner">
             <div class="container">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -59,19 +32,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="{{ url('article/index') }}" class="navbar-brand">Article</a>
+                    <a href="{{ url('article/index') }}" class="navbar-brand"><span class="glyphicon glyphicon-tree-conifer"></span>进击的程序员</a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <form class="navbar-form navbar-right" role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                      </div>
-                      <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
+                    
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('article/create') }}">Create</a></li>
-                        <li class="active"><a href="{{ url('article/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('article/contact') }}">Contact</a></li>
                         <li><a href="{{ url('article/about') }}">About</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                          </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>

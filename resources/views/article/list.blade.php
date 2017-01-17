@@ -315,15 +315,34 @@
         
 
         <div class="container">
-          <div id="app"></div>
-          <ul>
-            @foreach ($articles as $article)
-                <li><a href="{{ url('article/detail/') }}/{{ $article->id }}">{{ $article->title }}</a></li>              
-            @endforeach
-          </ul>
+            
+              <h4>Article</h4>
+              <p><a href="{{ url('article/index/') }}">Index</a>&nbsp;
+                    <a href="{{ url('article/list/') }}">List</a>&nbsp;
+                    <a href="{{ url('article/detail/1') }}">Detail</a>&nbsp;
+                    <a href="{{ url('article/create/') }}">Create</a>&nbsp;
+                    <a href="{{ url('article/edit/') }}">Edit</a>&nbsp;
+                    <a href="{{ url('article/delete/') }}">Delete</a>
+              </p>
 
-          <div>{{ $articles->links() }}</div>
-        </div> <!-- /list -->
+              <hr/>
+              <div id="app">
+                    <div class="content">
+                        Create
+                    </div>
+              </div>
+
+              <hr/>
+              <h4>Laravel5.3 + Vue2 + Bootstrap3 学习系列</h4>
+              <ul>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day1 <a href="http://l.com">环境配置及基本概念</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day2 <a href="{{ url('vue') }}">Hello Vue</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="{{ url('dashboard') }}">Vue单页面项目开发</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="{{ url('article/index') }}">文章发布系统</a></li>
+              </ul>
+
+        </div> <!-- /container -->
+
 
         <footer>
           <div class="container">
@@ -341,3 +360,4 @@
 
     </body>
 </html>
+        
