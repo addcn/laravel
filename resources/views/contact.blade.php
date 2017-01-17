@@ -21,7 +21,6 @@
 
     <body>
 
-
         <!-- Header -->
         <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav simple-navbar" role="banner">
             <div class="container">

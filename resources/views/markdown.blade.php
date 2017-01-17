@@ -7,7 +7,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ elixir('css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ elixir('css/simple.css') }}">
         <!-- Scripts -->
         <script>
             window.Laravel = <?php echo json_encode([
@@ -19,7 +19,7 @@
     </head>
 
     <body>
-
+        
         <div id="app">
             <div class="content">                
                 <parse :content="{&quot;raw&quot;:&quot;Dolores velit et ipsa. Reiciendis vero ipsam eos reiciendis modi. Quis id nesciunt pariatur animi.&quot;,&quot;html&quot;:&quot;&lt;p&gt;Dolores velit et ipsa. Reiciendis vero ipsam eos reiciendis modi. Quis id nesciunt pariatur animi.&lt;\/p&gt;&quot;}"></parse>
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Scripts -->
-        <script src="{{ elixir('js/home.js') }}"></script>
+        <script src="{{ elixir('js/simple.js') }}"></script>
 
         <script>
             hljs.initHighlightingOnLoad();

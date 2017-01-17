@@ -15,13 +15,14 @@ require('laravel-elixir-vue-2');
 
 elixir((mix) => {
     mix.sass('app.scss').webpack('app.js');
+	
+	//Hello Vue
+	mix.webpack('hellovue.js');
 
-	mix.sass('dashboard.scss').webpack('dashboard.js');
+	//vue单页面项目开发
+	mix.sass('spa.scss').webpack('spa.js');
 
-	mix.sass('dashboard.scss').webpack('home.js');
-
-
+	//簡單風格主題
 	mix.sass('simple.scss').webpack('simple.js');
-
 
 });

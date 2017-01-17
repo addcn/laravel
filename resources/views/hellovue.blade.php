@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ elixir('css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
         <title>hello vue2 & vue-router 2</title>
     </head>
 
@@ -13,9 +13,8 @@
         <div id="app">
 
             <h2>Hello Vue</h2>
-
-            <a href="/vue">Home</a>
-
+            <a href="{{ url('hellovue') }}">Home</a>
+            
             <!-- 使用 router-link 组件来导航. -->
             <router-link to="/foo">Go to Foo</router-link>
             <router-link to="/bar">Go to Bar</router-link>
@@ -33,11 +32,11 @@
                 <li>配置package.json</li>
                 <li>安装依赖 npm install</li>
 
-                <li>配置路由web.php及模板vue.blade.php</li>
-                <li>引入vue及vue-router开发，见js/app.js</li>
+                <li>配置路由web.hellovue.blade.php</li>
+                <li>引入vue及vue-router开发，见js/hellovue.js</li>
 
                 <li>编译合并 JS/CSS 代码，gulp，如需实时编译，可输入 gulp watch</li>
-                <li>http://l.com/vue</li>
+                <li>{{ url('hellovue') }}</li>
             </ul>
 
             <h4>技术栈</h4>
@@ -50,14 +49,16 @@
             </ul>
         </div>
         
+        <div>
             <hr/>
             <h4>Laravel5.3 + Vue2 + Bootstrap3 学习系列</h4>
             <ul>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day1 <a href="http://l.com">环境配置及基本概念</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day2 <a href="http://l.com/vue">Hello Vue</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="http://l.com/dashboard">Vue单页面项目开发</a></li>
-                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="http://l.com/article/index">文章发布系统</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day1 <a href="{{ url('/') }}">环境配置及基本概念</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day2 <a href="{{ url('hellovue') }}">Hello Vue</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="{{ url('spa') }}">Vue单页面项目开发</a></li>
+                <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="{{ url('article/index') }}">文章发布系统</a></li>
             </ul>
+        </div> <!-- /container -->
 
         <script type="text/javascript">
             var Laravel = {
@@ -65,6 +66,6 @@
                csrfToken: '{{ csrf_token() }}' 
             };
         </script>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/hellovue.js') }}"></script>
     </body>
 </html>

@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
     export default {
         data () {
             return {
@@ -14,7 +13,6 @@
             this.$http.get('/now')
                 .then((response) => {
                     this.statistics = response.data
-
                     console.log(response.data)
                 })
         }

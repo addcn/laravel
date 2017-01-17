@@ -13,11 +13,11 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
-     * Show the application dashboard.
+     * Show the index page.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,12 +28,12 @@ class HomeController extends Controller
 
 
     /**
-     * Display the dashboard page.
+     * Display the spa page.
      * 
      * @return mixed
      */
-    public function dashboard()
+    public function spa()
     {
-        return view('dashboard');
+        return view('spa');
     }
 }

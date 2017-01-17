@@ -18,14 +18,14 @@ class ArticleController extends Controller
 
 
     /**
-     * Display the article
+     * Display the markdown
      * 
      * @param  string
      * @return mixed
      */
-    public function test()
+    public function markdown()
     {
-        return view('article');
+        return view('markdown');
     }
 
     /**
