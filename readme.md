@@ -2,9 +2,7 @@
 
 使用 Laravel ```5.3.26``` +  vue ```2``` + Bootstrap ```3``` 构建。
 
-
 ## How to?
-
 
 ```
 # clone项目
