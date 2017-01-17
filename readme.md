@@ -1,34 +1,39 @@
+# Laravel
+
+使用 Laravel ```5.3.26``` +  vue ```2``` + Bootstrap ```3``` 构建。
 
 
-## Laravel
-
-Laravel Version ```5.3.26```
-
-
-## How?
+## How to?
 
 
 ```
 
+# clone项目
 git clone https://github.com/addcn/laravel.git your-project-folder
 
 cd your-project-folder
 
-php composer.phar install # 安裝依賴
+# 安装依赖
+php composer.phar install
 
-cp .env.example .env # 数据库连接
+# 数据库连接
+cp .env.example .env
 
-
+# 目录权限
 chown -R apache:apache /path/your-project-folder/storage /path/your-project-folder/bootstrap/cache
 
 chmod -R 775 /path/your-project-folder/storage /path/your-project-folder/bootstrap/cache
 
+# 数据迁移
 cd /path/your-project-folder
-php artisan migrate # 数据迁移
+php artisan migrate
+
 
 ```
+
+http://www.your-domain.com/
 
 
 ## About me
 
-- 微博[http://www.weibo.com/addcn](http://www.weibo.com/addcn)
+- 微博 [http://www.weibo.com/addcn](http://www.weibo.com/addcn)
