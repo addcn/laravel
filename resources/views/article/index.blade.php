@@ -83,6 +83,10 @@
                 <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day3 <a href="{{ url('spa') }}">Vue单页面项目开发</a></li>
                 <li>Laravel5.3 + Vue2 + Bootstrap3 学习 Day4 <a href="{{ url('article/index') }}">文章发布系统</a></li>
             </ul>
+            <h4>Laravel其它</h4>
+            <ul>
+                <li><a href="{{ url('markdown') }}">vue组件显示markdown内容</a></li>
+            </ul>
         </div> <!-- /container -->
 
         <footer>
