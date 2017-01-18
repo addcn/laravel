@@ -11,34 +11,39 @@
 |
 */
 
-Route::get('/', function () {
+// 系統默認
+Route::get('/w', function () {
     return view('welcome');
+    //return redirect('article/index');
 });
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
-
 
 // 當前時間
 Route::get('now', function(){
     return date("Y-m-d H:i:s");
 });
 
-// Vue使用
-Route::get('hellovue', function () {
-    return view('hellovue');
-});
 
 // 單頁面項目
 Route::group(['prefix' => 'spa'], function () {
-	Route::get('{path?}', 'HomeController@spa')->where('path', '[\/\w\.-]*');
+	Route::get('{path?}', 'IndexController@spa')->where('path', '[\/\w\.-]*');
 });
 
-// vue組件顯示markdown
-Route::get('markdown', 'ArticleController@markdown');
 
-// 文章发布系统
+// 首頁功能
+Route::get('markdown', 'IndexController@markdown'); 
+Route::get('contact', 'IndexController@contact');
+Route::get('about', 'IndexController@about');
+
+
+// 模板路由
+Route::get('hellovue', function () {
+    return view('hellovue'); // Vue使用
+});
+
+
+// 文章发布
 Route::get('article/index', 'ArticleController@index');
 Route::get('article/list', 'ArticleController@alist');
 Route::get('article/detail/{id}', 'ArticleController@detail');
@@ -50,16 +55,10 @@ Route::post('article/create', 'ArticleController@store');
 Route::get('article/edit', 'ArticleController@edit');
 Route::get('article/delete', 'ArticleController@delete');
 
-Route::get('article/contact', function () {
-    return view('contact');
-});
 
-Route::get('article/about', function () {
-    return view('about');
-});
 
 
 // 默認首頁
-Route::get('b', function () {
-    //return redirect('article/index');
+Route::get('/', function () {
+    return view('index');
 });

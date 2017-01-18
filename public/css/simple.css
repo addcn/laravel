@@ -5,7 +5,6 @@
  * @version v1.0.0
  * @updatetime 2017/01/17
  */
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -7703,22 +7702,21 @@ footer {
   margin: 10px 0;
 }
 
-/** header **/
+/** header 
 header.simple-navbar {
-  color: #333333;
-  background-color: #dddddd;
-  border-width: 5px 0 0;
-  border-color: #e74430;
+    color: #333333;
+    background-color: #dddddd;
+    border-width: 5px 0 0;
+    border-color: #e74430;
 }
 
-header.simple-navbar .navbar-brand {
-  color: #e74430;
+header.simple-navbar .navbar-brand{
+    color: #e74430;
 }
 
-header.simple-navbar .navbar-nav > li > a {
-  color: #333333;
-}
-
+header.simple-navbar .navbar-nav > li > a{
+    color: #333333;
+}**/
 /**
 header.simple-navbar .navbar-nav > li > a:link { 
     color:#333333; 

@@ -16,24 +16,8 @@ class ArticleController extends Controller
         $this->article = $article;
     }
 
-
     /**
-     * Display the markdown
-     * 
-     * @param  string
-     * @return mixed
-     */
-    public function markdown()
-    {
-        $article = new \App\Article();
-        $content = file_get_contents("./files/markdown/article/README.md");
-        $data = ['raw'  => $content];
-        $article->content = json_encode($data);
-        return view('markdown', compact('article'));
-    }
-
-    /**
-     * Display the article
+     * 文章首頁
      * 
      * @param  string
      * @return mixed
@@ -45,9 +29,8 @@ class ArticleController extends Controller
         return view('article.index', compact('article'));
     }
 
-
     /**
-     * Display the article
+     * 文章列表
      * 
      * @param  string
      * @return mixed
@@ -60,9 +43,8 @@ class ArticleController extends Controller
         return view('article.list', compact('articles'));
     }
 
-
     /**
-     * Display the article
+     * 文章詳細
      * 
      * @param  string
      * @return mixed
@@ -87,10 +69,8 @@ class ArticleController extends Controller
         return view('article.detail', compact('article'));
     }
 
-
-
     /**
-     * Display the article
+     * 文章新建
      * 
      * @param  string
      * @return mixed
@@ -103,7 +83,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Display the article
+     * 文章發布
      * 
      * @param  string
      * @return mixed
@@ -129,9 +109,8 @@ class ArticleController extends Controller
         return redirect()->to('article/detail/'.$result->id);
     }
 
-
     /**
-     * Display the article
+     * 文章編輯
      * 
      * @param  string
      * @return mixed
@@ -144,7 +123,7 @@ class ArticleController extends Controller
     }
 
     /**
-     * Display the article
+     * 文章刪除
      * 
      * @param  string
      * @return mixed

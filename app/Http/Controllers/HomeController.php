@@ -13,27 +13,16 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
-     * Show the index page.
+     * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         return view('home');
-    }
-
-
-    /**
-     * Display the spa page.
-     * 
-     * @return mixed
-     */
-    public function spa()
-    {
-        return view('spa');
     }
 }
