@@ -39,7 +39,7 @@ Route::get('about', 'IndexController@about');
 
 // 模板路由
 Route::get('hellovue', function () {
-    return view('hellovue'); // Vue使用
+    return view('index.hellovue'); // Vue使用
 });
 
 
