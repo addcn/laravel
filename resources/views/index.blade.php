@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +53,17 @@
     </header><!-- /header -->
 
     <div class="container">
-        <h1>Index</h1>
+        <div class="latest">
+            <h3>最新文章</h3>
+            <ul>
+                <li class="list-item"><span>2016年12月 2日 » </span><a href="{{ url('/') }}">环境配置及基本概念</a></li>
+                <li class="list-item"><span>2016年12月 2日 » </span><a href="{{ url('hellovue') }}">Hello Vue</a></li>
+                <li class="list-item"><span>2016年12月 2日 » </span><a href="{{ url('spa') }}">Vue单页面项目开发</a></li>
+                <li class="list-item"><span>2016年12月 2日 » </span><a href="{{ url('article/index') }}">文章发布系统</a></li>
+                <li class="list-item"><span>2016年12月 2日 » </span><a href="{{ url('markdown') }}">vue组件显示markdown内容</a></li>
+                <li class="list-item"><span>2016年12月 2日 » </span><a href="{{ url('article/index') }}"><strong>更多文章……</strong></a></li>
+            </ul>
+        </div>
     </div><!-- /body -->
 
     <footer>

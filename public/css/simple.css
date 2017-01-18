@@ -7696,6 +7696,7 @@ button.close {
 /** global **/
 body {
   margin-top: 75px;
+  background-color: #ffffff;
 }
 
 footer {

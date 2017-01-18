@@ -56,6 +56,12 @@ Route::get('article/edit', 'ArticleController@edit');
 Route::get('article/delete', 'ArticleController@delete');
 
 
+// 後台路由
+Route::group(array('namespace'=>'Admin'), function(){
+    Route::get('admin/', 'HomeController@index');
+    Route::get('admin/login', 'HomeController@login');
+    Route::get('admin/logout', 'HomeController@logout');
+});
 
 
 // 默認首頁

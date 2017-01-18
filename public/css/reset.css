@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * common.css
+ * @author dodo<lhuibo@gmail.com>
+ * @version v1.0.0
+ * @updatetime 2017/01/18
+ */
+body, p, ul, li, dl, dt, dd, ol, h1, h2, h3, h4, h5, form, input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px arial;
+  color: #333;
+  line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+a img {
+  border: none;
+}
+
+em {
+  font-style: normal;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+input {
+  vertical-align: middle;
+  outline: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  color: #333;
+  font-size: 12px;
+  font-family: "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,Verdana,sans-serif,"WenQuanYi Micro Hei","\5B8B\4F53";
+  background: #fff;
+  -webkit-text-size-adjust: none;
+}
+
+hr {
+  height: 1px;
+  margin: 5px 0;
+  border: medium none;
+  color: #ccc;
+  background-color: #ccc;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+/** 設置默認鏈接 **/
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:link {
+  color: #0044DD;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0044DD;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f60;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ba2636;
+}
+
+/*# sourceMappingURL=reset.css.map */
