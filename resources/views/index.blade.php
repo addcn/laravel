@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{{ url('/') }}" class="navbar-brand"><span class="glyphicon glyphicon-tree-conifer"></span>进击的程序员</a>
+                <a href="{{ url('/') }}" class="navbar-brand"><span class="glyphicon glyphicon-tree-conifer"></span>工作日志</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
@@ -69,7 +69,7 @@
     <footer>
         <div class="container">
             <hr/>
-            <p class="text-center">Copyrights &copy; 2017 dodo. All Rights Reserved.</p>
+            <p class="text-center">Copyrights &copy; 2017 dodo. All Rights Reserved. <span><a href="http://www.miibeian.gov.cn/" rel="nofollow">粤ICP备15017037号</a></span></p>
         </div>
     </footer> <!-- /footer -->
 
